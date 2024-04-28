@@ -85,8 +85,7 @@ with tab0:
                 fingerprint = content
                 fingerprint_descriptortypes = fp[fingerprint]
                 padeldescriptor(mol_dir= smilefile, 
-                            d_file=fingerprint_output_file, #'Substructure.csv'
-                            #descriptortypes='SubstructureFingerprint.xml', 
+                            d_file=fingerprint_output_file,
                             descriptortypes= fingerprint_descriptortypes,
                             detectaromaticity=True,
                             standardizenitro=True,
