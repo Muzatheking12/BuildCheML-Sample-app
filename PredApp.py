@@ -122,7 +122,13 @@ with tab0:
                         st.write(" ### Your **SMILES** is not correct  ")
                     else:
                         try:
-                               
+                                AllChem.Compute2DCoords(m)
+
+                                # Save the 2D structure as an image file
+                            
+                                img = Draw.MolToImage(m)
+                                img.save(smiledraw)
+                                st.image(smiledraw)
                                 # SMILES is valid, perform further processing
                                 st.write('### Molecular Properties')
 
