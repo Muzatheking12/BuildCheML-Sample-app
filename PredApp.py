@@ -1,7 +1,6 @@
 import streamlit as st
 from rdkit import Chem
 from rdkit.Chem import AllChem
-from rdkit.Chem import Draw
 from rdkit.Chem import Descriptors, Lipinski, Crippen, rdchem, QED, rdmolops, rdMolDescriptors
 import glob
 import pandas as pd
@@ -123,13 +122,7 @@ with tab0:
                         st.write(" ### Your **SMILES** is not correct  ")
                     else:
                         try:
-                                AllChem.Compute2DCoords(m)
-
-                                # Save the 2D structure as an image file
-                            
-                                img = Draw.MolToImage(m)
-                                img.save(smiledraw)
-                                st.image(smiledraw)
+                               
                                 # SMILES is valid, perform further processing
                                 st.write('### Molecular Properties')
 
