@@ -1,6 +1,7 @@
 import streamlit as st
 from rdkit import Chem
 from rdkit.Chem import AllChem
+from rdkit.Chem import Draw
 from rdkit.Chem import Descriptors, Lipinski, Crippen, rdchem, QED, rdmolops, rdMolDescriptors
 import glob
 import pandas as pd
